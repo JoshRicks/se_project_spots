@@ -1,5 +1,6 @@
 # Spots Project 3
 
+https://joshricks.github.io/se_project_spots/
 This is the third project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on a Figma Design.
 
 ## Project features
