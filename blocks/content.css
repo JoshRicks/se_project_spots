@@ -2,3 +2,8 @@
   padding: 34px 20px 0;
   background-color: #fcf5e5;
 }
+@media screen and (max-width: 610px) {
+  .content {
+    padding: 20px 16px 0;
+  }
+}
