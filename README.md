@@ -1,6 +1,9 @@
 # Spots Project 3
 
 https://joshricks.github.io/se_project_spots/
+
+Want to hear my thought process on this project here is a short video I made https://drive.google.com/file/d/1jHfh_mb-5EggMrYQUKStwxhxSfmLq1cj/view?usp=sharing
+
 This is the third project of the Software Engineering program at TripleTen. It was created using HTML and CSS, based on a Figma Design.
 
 ## Project features
