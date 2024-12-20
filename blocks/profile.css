@@ -17,7 +17,7 @@
 }
 .profile__edit-button {
   cursor: pointer;
-  margin: auto 0 20px;
+  margin: auto 0 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -129,7 +129,7 @@
     padding: 0;
     gap: 0;
   }
-  .profile__edit-btn {
+  .profile__edit-button {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -147,9 +147,6 @@
   .profile__description {
     text-align: center;
     margin-bottom: 32px;
-  }
-  .profile__edit-button {
-    justify-content: center;
   }
   .profile__new-button {
     max-width: 288px;
