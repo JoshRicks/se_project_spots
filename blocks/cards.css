@@ -13,7 +13,7 @@
   border-bottom: 1px solid #21212166;
   list-style: none;
 }
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 650px) {
   .cards {
     max-width: 288px;
     padding: 20px 0 0;

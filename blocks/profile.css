@@ -109,14 +109,13 @@
   width: 16px;
   height: 16px;
   gap: 0px;
-  color: #212121;
 }
 .profile__plus-icon {
   width: 16px;
   height: 16px;
 }
 
-@media screen and (max-width: 610px) {
+@media screen and (max-width: 650px) {
   .profile {
     flex-direction: column;
     justify-content: center;
