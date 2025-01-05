@@ -38,6 +38,7 @@
 }
 .profile__edit-button:hover {
   opacity: 100%;
+  cursor: url(../images/cursor.svg), pointer;
 }
 .profile__image {
   border-radius: 8px;
@@ -103,6 +104,7 @@
 }
 .profile__new-button:hover {
   opacity: 80%;
+  cursor: url(../images/cursor.svg), pointer;
 }
 
 .profile__pencil-icon {

@@ -14,6 +14,33 @@
     <title>spots</title>
   </head>
   <body class="page">
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="profile-modal-close"></button>
+        <h3 class="modal__header">Edit Profile</h3>
+        <form class="modal__form">
+          <label for="profile-name" class="modal__label">Name</label>
+          <input
+            type="text"
+            name="profile-name"
+            id="profile-name"
+            class="modal__input"
+            placeholder="Type your name"
+          />
+          <label for="profile-description" class="modal__label"
+            >Description</label
+          >
+          <input
+            type="text"
+            name="profile-description"
+            id="profile-description"
+            class="modal__input"
+            placeholder="Type your description"
+          />
+          <button class="modal__save-button">Save</button>
+        </form>
+      </div>
+    </div>
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="spots logo" />
     </header>
