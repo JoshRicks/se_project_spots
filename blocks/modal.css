@@ -11,6 +11,7 @@
 .modal__container {
   position: relative;
   max-width: 730px;
+  gap: 32px;
   top: 207px;
   margin: 0 auto;
   padding: 0 8px;
@@ -88,5 +89,19 @@
 @media screen and (max-width: 870px) {
   .modal__container {
     max-width: 300px;
+    top: 134px;
+    gap: 24px;
+  }
+  .modal__header {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+  .modal__input {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  .modal__save-button {
+    height: 52px;
+    width: 276px;
   }
 }
