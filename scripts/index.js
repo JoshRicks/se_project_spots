@@ -17,3 +17,18 @@ let initialCards = {
   name: "Mountain house",
   link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
 };
+
+const profileEditButton = document.querySelector(".profile__edit-button");
+const profileEditModal = document.querySelector(".modal");
+function openModal() {
+  profileEditModal.classList.add("modal_opened");
+}
+
+profileEditButton.addEventListener("click", openModal);
+
+const modalClose = document.querySelector(".modal__close");
+function closeModal() {
+  profileEditModal.classList.remove("modal_opened");
+}
+
+modalClose.addEventListener("click", closeModal);

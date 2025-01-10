@@ -4,8 +4,9 @@
   position: fixed;
   background: #21212150;
   z-index: 3;
+  visibility: hidden;
 }
-.modal:modal__opened {
+.modal_opened {
   visibility: visible;
 }
 .modal__container {
