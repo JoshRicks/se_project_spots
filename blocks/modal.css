@@ -31,6 +31,7 @@
   background-image: url(../images/close-symbol.svg);
   background-color: transparent;
   border: none;
+  transition: 1s linear 0s;
 }
 .modal__close:hover {
   opacity: 100%;
@@ -68,9 +69,11 @@
   text-align: left;
   border: 1px solid #21212166;
   color: #212121;
+  transition: 1s linear 0s;
 }
 .modal__input:hover {
   cursor: url(../images/cursor.svg), pointer;
+  border-color: #212121;
 }
 .modal__save-button {
   margin: 0;
@@ -86,12 +89,20 @@
   line-height: 1;
   text-align: center;
 }
+.modal__save-button:hover {
+  cursor: url(../images/cursor.svg), pointer;
+}
 
 @media screen and (max-width: 870px) {
   .modal__container {
     max-width: 300px;
     top: 134px;
     gap: 24px;
+    margin: 0 auto;
+  }
+  .modal__close {
+    top: 12px;
+    right: 12px;
   }
   .modal__header {
     font-size: 20px;
@@ -103,6 +114,13 @@
   }
   .modal__save-button {
     height: 52px;
-    width: 276px;
+    max-width: 276px;
+    min-width: 246px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .modal__container {
+    margin: 0 10px;
   }
 }
