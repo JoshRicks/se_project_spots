@@ -59,7 +59,7 @@
 }
 .modal__input {
   margin: 0 0 32px;
-  width: 100%;
+  width: 604px;
   font-family: Poppins;
   font-size: 20px;
   font-weight: 500;
@@ -111,7 +111,7 @@
   .modal__input {
     font-size: 16px;
     margin: 0 auto 24px;
-    max-width: 276px;
+    width: 250px;
   }
   .modal__save-button {
     height: 52px;
