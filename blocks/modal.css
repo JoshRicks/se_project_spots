@@ -30,7 +30,6 @@
   background-image: url(../images/close-symbol.svg);
   background-color: transparent;
   border: none;
-  transition: 1s linear 0s;
 }
 .modal__close:hover {
   opacity: 100%;
@@ -69,7 +68,7 @@
   text-align: left;
   border: 1px solid #21212166;
   color: #212121;
-  transition: 1s linear 0s;
+  padding: 16px 12px;
 }
 .modal__input:hover {
   cursor: url(../images/cursor.svg), pointer;
