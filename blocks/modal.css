@@ -11,7 +11,7 @@
 }
 .modal__container {
   position: relative;
-  max-width: 730px;
+  max-width: 630px;
   gap: 32px;
   top: 207px;
   margin: 0 auto;
