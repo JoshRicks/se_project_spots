@@ -1,4 +1,4 @@
-.modal {
+.profile-modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -6,10 +6,10 @@
   z-index: 3;
   visibility: hidden;
 }
-.modal_opened {
+.profile-modal_opened {
   visibility: visible;
 }
-.modal__container {
+.profile-modal__container {
   position: relative;
   max-width: 630px;
   gap: 32px;
@@ -19,7 +19,7 @@
   background-color: #fff;
   padding: 32px 50px;
 }
-.modal__close {
+.profile-modal__close {
   position: absolute;
   top: 32px;
   right: 50px;
@@ -31,11 +31,11 @@
   background-color: transparent;
   border: none;
 }
-.modal__close:hover {
+.profile-modal__close:hover {
   opacity: 100%;
   cursor: url(../images/cursor.svg), pointer;
 }
-.modal__header {
+.profile-modal__header {
   margin: 0 0 32px;
   font-family: Poppins;
   font-size: 32px;
@@ -43,11 +43,11 @@
   line-height: 1;
   text-align: left;
 }
-.modal__form {
+.profile-modal__form {
   display: flex;
   flex-direction: column;
 }
-.modal__label {
+.profile-modal__label {
   margin: 0 0 8px;
   font-family: Poppins;
   font-size: 16px;
@@ -57,7 +57,7 @@
   color: #212121;
   opacity: 70%;
 }
-.modal__input {
+.profile-modal__input {
   margin: 0 0 32px;
   width: 604px;
   font-family: Poppins;
@@ -70,11 +70,11 @@
   color: #212121;
   padding: 16px 12px;
 }
-.modal__input:hover {
+.profile-modal__input:hover {
   cursor: url(../images/cursor.svg), pointer;
   border-color: #212121;
 }
-.modal__save-button {
+.profile-modal__save-button {
   margin: 0;
   height: 52px;
   width: 156px;
@@ -88,32 +88,32 @@
   line-height: 1;
   text-align: center;
 }
-.modal__save-button:hover {
+.profile-modal__save-button:hover {
   cursor: url(../images/cursor.svg), pointer;
 }
 
 @media screen and (max-width: 870px) {
-  .modal__container {
+  .profile-modal__container {
     max-width: 300px;
     top: 134px;
     gap: 24px;
     margin: 0 auto;
     padding: 12px;
   }
-  .modal__close {
+  .profile-modal__close {
     top: 12px;
     right: 12px;
   }
-  .modal__header {
+  .profile-modal__header {
     font-size: 20px;
     margin-bottom: 24px;
   }
-  .modal__input {
+  .profile-modal__input {
     font-size: 16px;
     margin: 0 auto 24px;
     width: 250px;
   }
-  .modal__save-button {
+  .profile-modal__save-button {
     height: 52px;
     width: 276px;
     min-width: 246px;
@@ -121,7 +121,7 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .modal__container {
+  .profile-modal__container {
     margin: 0 10px;
   }
 }
