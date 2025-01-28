@@ -95,10 +95,18 @@ function getCardElement(data) {
 
   const cardNameElement = cardElement.querySelector(".card__text");
   const cardImageElement = cardElement.querySelector(".card__image");
+  const cardLikeElement = cardElement.querySelector(".card__like-button");
+  const cardDeleteElement = cardElement.querySelector(".card__delete-button");
 
   cardNameElement.textContent = data.name;
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
+
+  cardLikeElement.addEventListener("click", () => {
+    cardLikeElement.classList.toggle("card__like-button_liked");
+  });
+
+  cardDeleteElement.addEventListener("click", () => {});
 
   return cardElement;
 }
