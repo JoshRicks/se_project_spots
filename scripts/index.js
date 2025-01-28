@@ -106,7 +106,9 @@ function getCardElement(data) {
     cardLikeElement.classList.toggle("card__like-button_liked");
   });
 
-  cardDeleteElement.addEventListener("click", () => {});
+  cardDeleteElement.addEventListener("click", () => {
+    cardElement.remove();
+  });
 
   return cardElement;
 }
