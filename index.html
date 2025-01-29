@@ -14,62 +14,66 @@
     <title>spots</title>
   </head>
   <body class="page">
-    <div class="profile-modal" id="profile-edit-modal">
-      <div class="profile-modal__container">
-        <button class="profile-modal__close" id="profile-modal-close"></button>
-        <h3 class="profile-modal__header">Edit Profile</h3>
-        <form class="profile-modal__form">
-          <label for="profile-name-input" class="profile-modal__label"
-            >Name</label
-          >
+    <div class="modal" id="profile-edit-modal">
+      <div class="modal__container">
+        <button class="modal__close" id="profile-modal-close"></button>
+        <h3 class="modal__header">Edit Profile</h3>
+        <form class="modal__form" id="#profile-modal-form">
+          <label for="profile-name-input" class="modal__label">Name</label>
           <input
             type="text"
             name="profile-name"
             id="profile-name-input"
-            class="profile-modal__input"
+            class="modal__input"
             placeholder="Type your name"
           />
-          <label for="profile-description-input" class="profile-modal__label"
+          <label for="profile-description-input" class="modal__label"
             >Description</label
           >
           <input
             type="text"
             name="profile-description"
             id="profile-description-input"
-            class="profile-modal__input"
+            class="modal__input"
             placeholder="Type your description"
           />
-          <button class="profile-modal__save-button" type="submit">Save</button>
+          <button class="modal__save-button" type="submit">Save</button>
         </form>
       </div>
     </div>
-    <div class="card-modal" id="card-edit-modal">
-      <div class="card-modal__container">
-        <button class="card-modal__close" id="card-modal-close"></button>
-        <h3 class="card-modal__header">New Post</h3>
-        <form class="card-modal__form">
-          <label for="card-link-input" class="card-modal__label"
-            >image link</label
-          >
+    <div class="modal" id="card-edit-modal">
+      <div class="modal__container modal__container_type_card">
+        <button class="modal__close" id="card-modal-close"></button>
+        <h3 class="modal__header modal__header_type_card">New Post</h3>
+        <form class="modal__form" id="card-modal-form">
+          <label for="card-link-input" class="modal__label">image link</label>
           <input
             type="url"
             name="card-link"
             id="card-link-input"
-            class="card-modal__input"
+            class="modal__input"
             placeholder="Paste a link to the picture"
           />
-          <label for="card-caption-input" class="card-modal__label"
-            >Caption</label
-          >
+          <label for="card-caption-input" class="modal__label">Caption</label>
           <input
             type="text"
             name="card-caption"
             id="card-caption-input"
-            class="card-modal__input"
+            class="modal__input"
             placeholder="Type your caption"
           />
-          <button class="card-modal__save-button" type="submit">Save</button>
+          <button class="modal__save-button" type="submit">Save</button>
         </form>
+      </div>
+    </div>
+    <div class="modal" id="image-modal">
+      <div class="modal__container modal__container_type_preview">
+        <button
+          class="modal__close modal__close_type_preview"
+          type="button"
+        ></button>
+        <img src="" alt="" class="modal__image" />
+        <p class="modal__caption">Val Thorens</p>
       </div>
     </div>
     <header class="header">

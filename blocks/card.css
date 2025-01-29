@@ -68,6 +68,7 @@
   right: 10px;
   height: 32px;
   width: 32px;
+  transition: 1s linear 0s;
 }
 .card__delete-button:hover {
   background-image: url(../images/trash-hover.svg);
