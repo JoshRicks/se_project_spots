@@ -5,7 +5,7 @@
   background: #21212150;
   z-index: 3;
   visibility: hidden;
-  transition: visibility 0.5s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 .modal_opened {
   visibility: visible;
@@ -22,7 +22,7 @@
   padding: 32px 50px;
 }
 .modal__container_type_card {
-  top: 204px;
+  top: 200px;
   padding: 33px 50px 46px;
 }
 .modal__container_type_preview {
@@ -34,8 +34,7 @@
   width: 100%;
   border-radius: 8px;
   object-fit: contain;
-  max-width: 80vw;
-  max-height: 80vh;
+  max-height: 925px;
   margin: 0 0 8px;
 }
 .modal__close {
@@ -187,6 +186,9 @@
   }
   .modal__close_type_preview {
     top: -38px;
-    right: 30px;
+    right: 0;
+  }
+  .modal__image {
+    width: 288px;
   }
 }

@@ -32,7 +32,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 413px;
+  max-width: 387px;
 }
 .card__like-button {
   cursor: pointer;
@@ -42,8 +42,10 @@
   transition: 1s linear 0s;
   padding: 0;
   background-image: url(../images/like-icon.svg);
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
+  margin-right: 2px;
 }
 
 .card__like-button:hover {
@@ -54,6 +56,7 @@
 .card__like-button_liked {
   background-image: url("../images/liked-default.svg");
   opacity: 1;
+  background-color: transparent;
 }
 .card__like-button_liked:hover {
   background-image: url("../images/liked-hover.svg");

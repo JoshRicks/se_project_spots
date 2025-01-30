@@ -92,6 +92,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(cardEditModal);
+  addPostFormElement.reset();
 }
 
 function getCardElement(data) {
