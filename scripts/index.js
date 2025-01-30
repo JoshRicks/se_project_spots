@@ -47,7 +47,7 @@ const editModalLinkInput = cardEditModal.querySelector("#card-link-input");
 const editModalCaptionInput = cardEditModal.querySelector(
   "#card-caption-input"
 );
-const addPostFormElement = cardEditModal.querySelector("#card-modal-form");
+const addPostFormElement = cardEditModal.querySelector(".modal__form");
 const cardModalCloseButton = cardEditModal.querySelector("#card-modal-close");
 const cardLinkInput = cardEditModal.querySelector("#card-link-input");
 const cardCaptionInput = cardEditModal.querySelector("#card-caption-input");
