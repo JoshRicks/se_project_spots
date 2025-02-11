@@ -180,7 +180,7 @@
   }
   .modal__input {
     font-size: 16px;
-    margin: 0 auto 24px;
+    margin: 8px auto 0;
     width: 250px;
   }
   .modal__save-button {
@@ -196,6 +196,9 @@
 @media screen and (max-width: 400px) {
   .modal__container {
     margin: 0 10px;
+  }
+  .modal__label {
+    margin-bottom: 24px;
   }
 }
 @media screen and (max-width: 360px) {
