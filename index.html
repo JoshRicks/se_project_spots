@@ -19,24 +19,37 @@
         <button class="modal__close" id="profile-modal-close"></button>
         <h3 class="modal__header">Edit Profile</h3>
         <form class="modal__form" id="#profile-modal-form">
-          <label for="profile-name-input" class="modal__label">Name</label>
-          <input
-            type="text"
-            name="profile-name"
-            id="profile-name-input"
-            class="modal__input"
-            placeholder="Type your name"
-          />
+          <label for="profile-name-input" class="modal__label"
+            >Name
+            <input
+              type="text"
+              name="profile-name"
+              id="profile-name-input"
+              class="modal__input"
+              placeholder="Type your name"
+              minlength="2"
+              maxlength="40"
+              required
+            />
+            <span id="profile-name-input-error" class="modal__error"></span>
+          </label>
           <label for="profile-description-input" class="modal__label"
-            >Description</label
-          >
-          <input
-            type="text"
-            name="profile-description"
-            id="profile-description-input"
-            class="modal__input"
-            placeholder="Type your description"
-          />
+            >Description
+            <input
+              type="text"
+              name="profile-description"
+              id="profile-description-input"
+              class="modal__input"
+              placeholder="Type your description"
+              minlength="2"
+              maxlength="200"
+              required
+            />
+            <span
+              id="profile-description-input-error"
+              class="modal__error"
+            ></span>
+          </label>
           <button class="modal__save-button" type="submit">Save</button>
         </form>
       </div>
@@ -46,22 +59,32 @@
         <button class="modal__close" id="card-modal-close"></button>
         <h3 class="modal__header modal__header_type_card">New Post</h3>
         <form class="modal__form" id="card-modal-form">
-          <label for="card-link-input" class="modal__label">image link</label>
-          <input
-            type="url"
-            name="card-link"
-            id="card-link-input"
-            class="modal__input"
-            placeholder="Paste a link to the picture"
-          />
-          <label for="card-caption-input" class="modal__label">Caption</label>
-          <input
-            type="text"
-            name="card-caption"
-            id="card-caption-input"
-            class="modal__input"
-            placeholder="Type your caption"
-          />
+          <label for="card-link-input" class="modal__label"
+            >image link
+            <input
+              type="url"
+              name="card-link"
+              id="card-link-input"
+              class="modal__input"
+              placeholder="Paste a link to the picture"
+              required
+            />
+            <span id="card-link-input-error" class="modal__error"></span>
+          </label>
+          <label for="card-caption-input" class="modal__label"
+            >Caption
+            <input
+              type="text"
+              name="card-caption"
+              id="card-caption-input"
+              class="modal__input"
+              placeholder="Type your caption"
+              minlength="2"
+              maxlength="30"
+              required
+            />
+            <span id="card-caption-input-error" class="modal__error"></span>
+          </label>
           <button class="modal__save-button" type="submit">Save</button>
         </form>
       </div>
@@ -127,5 +150,6 @@
       <p class="footer__copywrite">2024 &copy; Spots</p>
     </footer>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js " defer></script>
   </body>
 </html>

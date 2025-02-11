@@ -80,7 +80,7 @@
   flex-direction: column;
 }
 .modal__label {
-  margin: 0 0 8px;
+  margin: 0 0 32px;
   font-family: "Poppins";
   font-size: 16px;
   font-weight: 500;
@@ -90,7 +90,7 @@
   opacity: 70%;
 }
 .modal__input {
-  margin: 0 0 32px;
+  margin: 8px 0 0;
   width: 604px;
   font-family: "Poppins";
   font-size: 20px;
@@ -105,6 +105,18 @@
 .modal__input:hover {
   cursor: url(../images/cursor.svg), pointer;
   border-color: #212121;
+}
+.modal__error {
+  display: block;
+  color: #ff0000b2;
+  font: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  margin-top: 8px;
+}
+.modal__input_type_error {
+  border: 1px solid #ff000099;
 }
 .modal__save-button {
   margin: 0;
@@ -122,6 +134,10 @@
 }
 .modal__save-button:hover {
   cursor: url(../images/cursor.svg), pointer;
+}
+.modal__button_type_disabled {
+  background-color: #212121;
+  opacity: 50%;
 }
 
 .modal__caption {
