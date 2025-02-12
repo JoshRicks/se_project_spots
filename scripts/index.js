@@ -180,7 +180,3 @@ modals.forEach((modal) => {
     }
   });
 });
-
-function closeModal(modal) {
-  modal.classList.remove("modal_opened");
-}

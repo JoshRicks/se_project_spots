@@ -135,7 +135,7 @@
 .modal__save-button:hover {
   cursor: url(../images/cursor.svg), pointer;
 }
-.modal__button_type_disabled {
+.modal__save-button_disabled {
   background-color: #212121;
   opacity: 50%;
 }
