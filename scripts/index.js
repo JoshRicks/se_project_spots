@@ -189,7 +189,7 @@ function handleEscape(evt) {
   if (evt.key === `Escape`) {
     const openedPopup = document.querySelector(".modal_opened");
     if (openedPopup) {
-      openedPopup.classList.remove("modal_opened");
+      closeModal(openedPopup);
     }
   }
 }
