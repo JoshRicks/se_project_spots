@@ -68,6 +68,7 @@ const modals = document.querySelectorAll(".modal");
 
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 const profileModalClose = profileEditModal.querySelector(
@@ -75,6 +76,7 @@ const profileModalClose = profileEditModal.querySelector(
 );
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.addEventListener("keydown", handleEscape);
 }
 
 function handleProfileEditFormSubmit(evt) {
@@ -181,16 +183,13 @@ modals.forEach((modal) => {
       closeModal(modal);
     }
   });
-
-  document.addEventListener("keyup", function (evt) {
-    if (modal.classList.contains("modal_opened") && evt.key === "Escape") {
-      closeModal(modal);
-    }
-  });
-
-  document.removeEventListener("keyup", function (evt) {
-    if (modal.classList.contains("modal_opened") && evt.key === "Escape") {
-      closeModal(modal);
-    }
-  });
 });
+
+function handleEscape(evt) {
+  if (evt.key === `Escape`) {
+    const openedPopup = document.querySelector(".modal_opened");
+    if (openedPopup) {
+      openedPopup.classList.remove("modal_opened");
+    }
+  }
+}
