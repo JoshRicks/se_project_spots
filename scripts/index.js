@@ -76,7 +76,7 @@ const profileModalClose = profileEditModal.querySelector(
 );
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-  document.addEventListener("keydown", handleEscape);
+  document.removeEventListener("keydown", handleEscape);
 }
 
 function handleProfileEditFormSubmit(evt) {
