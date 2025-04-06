@@ -1,3 +1,5 @@
+import validation from "./validation.js";
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -66,6 +68,8 @@ const cardsList = document.querySelector(".cards__list");
 //Modal Element
 const modals = document.querySelectorAll(".modal");
 
+validation.enableValidation(validation.config);
+
 function openModal(modal) {
   modal.classList.add("modal_opened");
   document.addEventListener("keydown", handleEscape);
@@ -97,7 +101,7 @@ function handleAddCardSubmit(evt) {
   };
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-  disableButton(modalSubmitButton, config);
+  disableButton(modalSubmitButton, validation.config);
   const form = evt.currentTarget.closest(`form`);
   if (form) {
     form.reset();
@@ -158,10 +162,10 @@ cardModalCloseButton.addEventListener("click", () => {
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
-  resetValidation(
+  validation.resetValidation(
     editProfileFormElement,
     [editModalNameInput, editModalDescriptionInput],
-    config
+    validation.config
   );
   openModal(profileEditModal);
 });
