@@ -128,17 +128,23 @@ function handleProfileEditFormSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  const inputValues = {
-    name: cardCaptionInput.value,
-    link: cardLinkInput.value,
-  };
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
-  disableButton(modalSubmitButton, validation.config);
-  const form = evt.currentTarget.closest(`form`);
-  if (form) {
-    form.reset();
-  }
+  api
+    .createNewCard({ link: cardLinkInput.value, name: cardCaptionInput.value })
+    .then((data) => {
+      const inputValues = {
+        name: data.name,
+        link: data.link,
+      };
+      const cardElement = getCardElement(inputValues);
+      cardsList.prepend(cardElement);
+      disableButton(modalSubmitButton, validation.config);
+      const form = evt.currentTarget.closest(`form`);
+      if (form) {
+        form.reset();
+      }
+    })
+    .catch(console.error);
+
   closeModal(cardEditModal);
 }
 

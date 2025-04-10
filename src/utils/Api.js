@@ -22,6 +22,22 @@ class Api {
       Promise.reject(`Error: ${res.status}`);
     });
   }
+  createNewCard({ link, name }) {
+    return fetch(`${this._baseUrl}/cards`, {
+      method: "POST",
+      headers: this._header,
+      // Send the data in the body as a JSON string.
+      body: JSON.stringify({
+        link,
+        name,
+      }),
+    }).then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      Promise.reject(`Error: ${res.status}`);
+    });
+  }
 
   getAppInfo() {
     return Promise.all([this.getInitialCards(), this.getUserInfo()]);
