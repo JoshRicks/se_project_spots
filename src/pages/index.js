@@ -156,6 +156,16 @@ function handleAddCardSubmit(evt) {
   closeModal(cardEditModal);
 }
 
+function handleLike(evt, id) {
+  const isLiked = evt.target.classList.contains("card__like-button_liked");
+  api
+    .handleLike(id, isLiked)
+    .then(() => {
+      evt.target.classList.toggle("card__like-button_liked");
+    })
+    .catch(console.error);
+}
+
 function getCardElement(data) {
   const cardElement = cardTemplate.content
     .querySelector(".card")
@@ -170,11 +180,11 @@ function getCardElement(data) {
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
 
-  cardLikeElement.addEventListener("click", () => {
-    cardLikeElement.classList.toggle("card__like-button_liked");
+  cardLikeElement.addEventListener("click", (evt) => {
+    handleLike(evt, data._id);
   });
 
-  cardDeleteElement.addEventListener("click", (evt) => {
+  cardDeleteElement.addEventListener("click", () => {
     handleDeleteCard(cardElement, data._id);
   });
   cardImageElement.addEventListener("click", () => {
