@@ -1,5 +1,6 @@
 import "./index.css";
 import validation from "../scripts/validation.js";
+import Api from "../utils/Api.js";
 
 const initialCards = [
   {
@@ -28,11 +29,34 @@ const initialCards = [
   },
 ];
 
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "392da7a8-ead8-4180-ae63-2b9b8f49820f",
+    "Content-Type": "application/json",
+  },
+});
+
+api
+  .getAppInfo()
+  .then(([cards, user]) => {
+    cards.forEach((item) => {
+      const cardElement = getCardElement(item);
+      cardsList.prepend(cardElement);
+    });
+
+    profileAvatar.src = user.avatar;
+    profileName.textContent = user.name;
+    profileDescription.textContent = user.about;
+  })
+  .catch(console.error);
+
 // Profile Elements
 const profileEditButton = document.querySelector(".profile__edit-button");
 const profileName = document.querySelector(".profile__name");
 const profileDescription = document.querySelector(".profile__description");
 const cardNewPostButton = document.querySelector(".profile__new-button");
+const profileAvatar = document.querySelector(".profile__image");
 
 // Form Elements
 const profileEditModal = document.querySelector("#profile-edit-modal");
@@ -87,8 +111,16 @@ function closeModal(modal) {
 function handleProfileEditFormSubmit(evt) {
   evt.preventDefault();
 
-  profileDescription.textContent = editModalDescriptionInput.value;
-  profileName.textContent = editModalNameInput.value;
+  api
+    .editUserInfo({
+      name: editModalNameInput.value,
+      about: editModalDescriptionInput.value,
+    })
+    .then((data) => {
+      profileName.textContent = data.name;
+      profileDescription.textContent = data.about;
+    })
+    .catch(console.error);
 
   closeModal(profileEditModal);
 }
@@ -142,11 +174,6 @@ function getCardElement(data) {
 
   return cardElement;
 }
-
-initialCards.forEach((item) => {
-  const cardElement = getCardElement(item);
-  cardsList.prepend(cardElement);
-});
 
 profileModalClose.addEventListener("click", () => {
   closeModal(profileEditModal);
