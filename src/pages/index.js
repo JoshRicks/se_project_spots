@@ -60,6 +60,7 @@ const profileAvatar = document.querySelector(".profile__image");
 
 // Form Elements
 const profileEditModal = document.querySelector("#profile-edit-modal");
+const cardDeleteModal = document.querySelector("#delete-modal");
 const editModalNameInput = profileEditModal.querySelector(
   "#profile-name-input"
 );
@@ -85,6 +86,9 @@ const previewModalCloseButton =
 const previewImage = imagePreviewModal.querySelector(".modal__image");
 const previewCaption = imagePreviewModal.querySelector(".modal__caption");
 const modalSubmitButton = cardEditModal.querySelector(".modal__save-button");
+const deleteModalCloseButton = cardDeleteModal.querySelector(
+  ".modal__close_type_delete"
+);
 
 //Card related Elements
 const cardTemplate = document.querySelector("#card-template");
@@ -167,7 +171,7 @@ function getCardElement(data) {
   });
 
   cardDeleteElement.addEventListener("click", () => {
-    cardElement.remove();
+    openModal(cardDeleteModal);
   });
 
   cardImageElement.addEventListener("click", () => {
@@ -210,6 +214,10 @@ cardNewPostButton.addEventListener("click", () => {
 
 previewModalCloseButton.addEventListener("click", () => {
   closeModal(imagePreviewModal);
+});
+
+deleteModalCloseButton.addEventListener("click", () => {
+  closeModal(cardDeleteModal);
 });
 
 modals.forEach((modal) => {
