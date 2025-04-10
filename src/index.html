@@ -10,7 +10,6 @@
     <meta name="keywords" content="Social Media, photo sharing" />
     <meta name="author" content="Josh Ricks" />
     <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="stylesheet" href="./pages/index.css" />
     <title>spots</title>
   </head>
   <body class="page">
@@ -100,12 +99,16 @@
       </div>
     </div>
     <header class="header">
-      <img class="header__logo" src="./images/logo.svg" alt="spots logo" />
+      <img
+        class="header__logo"
+        src="<%=require('./images/logo.svg')%>"
+        alt="spots logo"
+      />
     </header>
     <main class="content">
       <section class="profile">
         <img
-          src="./images/avatar.jpg"
+          src="<%=require('./images/avatar.jpg')%>"
           alt="profile avatar"
           class="profile__image"
         />
@@ -115,7 +118,7 @@
 
           <button class="profile__edit-button" type="button">
             <img
-              src="./images/pencil.svg"
+              src="<%=require('./images/pencil.svg')%>"
               alt="image of pencil"
               class="profile__pencil-icon"
             />
@@ -124,7 +127,7 @@
         </div>
         <button class="profile__new-button" type="button">
           <img
-            src="./images/plus-symbol.svg"
+            src="<%=require('./images/plus-symbol.svg')%>"
             alt="add"
             class="profile__plus-icon"
           />
@@ -135,7 +138,7 @@
         <ul class="cards__list">
           <template id="card-template">
             <li class="card">
-              <img src="" alt="e" class="card__image" />
+              <img src="" alt="" class="card__image" />
               <div class="card__description">
                 <h2 class="card__text"></h2>
                 <button class="card__like-button" type="button"></button>
@@ -149,6 +152,5 @@
     <footer class="footer">
       <p class="footer__copywrite">2024 &copy; Spots</p>
     </footer>
-    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
