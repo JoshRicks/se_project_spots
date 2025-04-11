@@ -92,6 +92,10 @@ const modalSubmitButton = cardEditModal.querySelector(".modal__save-button");
 const deleteModalCloseButton = cardDeleteModal.querySelector(
   ".modal__close_type_delete"
 );
+const profileEditSaveBtn = profileEditModal.querySelector(
+  ".modal__save-button"
+);
+const deleteButton = cardDeleteModal.querySelector(".modal__delete-btn");
 
 //Card related Elements
 const cardTemplate = document.querySelector("#card-template");
@@ -136,7 +140,7 @@ function handleAvatarEditFormSubmit(evt) {
       console.error(err);
     })
     .finally(() => {
-      saveAvatarBtn.textContent = "Save";
+      saveAvatarBtn.textContent = "Saving";
     });
 }
 
@@ -152,7 +156,10 @@ function handleProfileEditFormSubmit(evt) {
       profileName.textContent = data.name;
       profileDescription.textContent = data.about;
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      profileEditSaveBtn.textContent = "Saving";
+    });
 
   closeModal(profileEditModal);
 }
@@ -175,7 +182,10 @@ function handleAddCardSubmit(evt) {
         form.reset();
       }
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      modalSubmitButton.textContent = "Saving";
+    });
 
   closeModal(cardEditModal);
 }
@@ -229,7 +239,10 @@ function handleDeleteSubmit(evt) {
       selectedCard.remove();
       closeModal(cardDeleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      deleteButton.textContent = "Deleting";
+    });
 }
 profileModalClose.addEventListener("click", () => {
   closeModal(profileEditModal);
