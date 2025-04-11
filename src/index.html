@@ -115,6 +115,36 @@
         </form>
       </div>
     </div>
+    <div class="modal" id="avatar-edit-modal">
+      <div class="modal__container modal__container_type_avatar">
+        <button class="modal__close" id="avatar-modal-close"></button>
+        <h3 class="modal__header modal__header_type_avatar">
+          Edit Profile Avatar
+        </h3>
+        <form class="modal__form" id="avatar-modal-form">
+          <label
+            for="avatar-link-input"
+            class="modal__label modal__label_type_avatar"
+            >Profile Picture
+            <input
+              type="url"
+              name="avatar-link"
+              id="avatar-link-input"
+              class="modal__input"
+              placeholder="Paste the link to an image"
+              required
+            />
+            <span id="avatar-link-input-error" class="modal__error"></span>
+          </label>
+          <button
+            class="modal__save-button modal__save-button_type_avatar"
+            type="submit"
+          >
+            Save
+          </button>
+        </form>
+      </div>
+    </div>
     <header class="header">
       <img
         class="header__logo"
@@ -124,11 +154,21 @@
     </header>
     <main class="content">
       <section class="profile">
-        <img
-          src="<%=require('./images/avatar.jpg')%>"
-          alt="profile avatar"
-          class="profile__image"
-        />
+        <div class="profile__avatar-container">
+          <img
+            src="<%=require('./images/avatar.jpg')%>"
+            alt="profile avatar"
+            class="profile__image"
+          />
+          <button class="avatar__edit-button" type="button">
+            <img
+              src="<%=require('./images/white-pencil.svg')%>"
+              alt="image of pencil"
+              class="profile__pencil-icon"
+            />
+            Edit Profile
+          </button>
+        </div>
         <div class="profile__column">
           <h1 class="profile__name">Bessie Coleman</h1>
           <p class="profile__description">Civil Aviator</p>

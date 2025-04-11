@@ -36,6 +36,10 @@
   top: 325px;
   padding: 32px 20px;
 }
+
+.modal__container_type_avatar {
+  max-width: 730px;
+}
 .modal__image {
   width: 100%;
   border-radius: 8px;
@@ -152,6 +156,12 @@
 .modal__save-button:hover {
   cursor: url(../images/cursor.svg), pointer;
 }
+
+.modal__save-button_type_avatar {
+  background-color: #212121;
+  opacity: 1;
+}
+
 .modal__save-button_disabled {
   background-color: #212121;
   opacity: 50%;
@@ -242,10 +252,18 @@
     margin-bottom: 34px;
     margin-top: 10px;
   }
+  .modal__header_type_avatar {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
   .modal__input {
     font-size: 16px;
     margin: 8px auto 0;
     width: 250px;
+  }
+  .modal__label_type_avatar {
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
   .modal__save-button {
     height: 52px;
@@ -264,6 +282,9 @@
   .modal__label {
     margin-bottom: 24px;
   }
+  .modal__label_type_avatar {
+    margin: 0 0 12px;
+  }
   .modal__header_type_delete {
     margin-bottom: 20px;
     font-size: 20px;
@@ -273,6 +294,9 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
+  }
+  .modal__save-button_type_avatar {
+    margin: 0;
   }
 }
 @media screen and (max-width: 360px) {
