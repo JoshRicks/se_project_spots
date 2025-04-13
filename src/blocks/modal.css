@@ -37,9 +37,6 @@
   padding: 32px 20px;
 }
 
-.modal__container_type_avatar {
-  max-width: 730px;
-}
 .modal__image {
   width: 100%;
   border-radius: 8px;
