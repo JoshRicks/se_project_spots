@@ -61,7 +61,7 @@ const previewModalCloseButton =
 
 const previewImage = imagePreviewModal.querySelector(".modal__image");
 const previewCaption = imagePreviewModal.querySelector(".modal__caption");
-const modalSubmitButton = cardEditModal.querySelector(".modal__save-button");
+const cardSubmitBtn = cardEditModal.querySelector(".modal__save-button");
 const deleteModalCloseButton = cardDeleteModal.querySelector(
   ".modal__close_type_delete"
 );
@@ -122,7 +122,7 @@ function handleAvatarEditFormSubmit(evt) {
 function handleProfileEditFormSubmit(evt) {
   evt.preventDefault();
 
-  profileEditButton.textContent = "Saving...";
+  profileEditSaveBtn.textContent = "Saving...";
 
   api
     .editUserInfo({
@@ -143,20 +143,20 @@ function handleProfileEditFormSubmit(evt) {
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
-  modalSubmitButton.textContent = "Saving...";
+  cardSubmitBtn.textContent = "Saving...";
 
   api
     .createNewCard({ link: cardLinkInput.value, name: cardCaptionInput.value })
     .then((data) => {
       const cardElement = getCardElement(data);
       cardsList.prepend(cardElement);
-      validation.disableButton(modalSubmitButton, validation.config);
+      validation.disableButton(cardSubmitBtn, validation.config);
       closeModal(cardEditModal);
       addPostFormElement.reset();
     })
     .catch(console.error)
     .finally(() => {
-      modalSubmitButton.textContent = "Save";
+      cardSubmitBtn.textContent = "Save";
     });
 }
 
