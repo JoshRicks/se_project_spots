@@ -7,7 +7,7 @@
     "build": "webpack --mode production",
     "dev": "webpack serve --mode development",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/JoshRicks/se_project_spots/issues"
   },
-  "homepage": "https://github.com/JoshRicks/se_project_spots#readme",
+  "homepage": "https://joshricks.github.io/se_project_spots",
   "devDependencies": {
     "@babel/core": "7.18.9",
     "@babel/preset-env": "7.18.9",
