@@ -1,6 +1,4 @@
-# Spots Project 3 - 6
-
-https://joshricks.github.io/se_project_spots/
+# Spots Project 3 - 6 and 9
 
 Want to hear my thought process on this project here is a short video I made https://drive.google.com/file/d/1jHfh_mb-5EggMrYQUKStwxhxSfmLq1cj/view?usp=sharing
 
@@ -12,6 +10,8 @@ In the fifth project I converted the cards into a template embracing what I lear
 
 In the sixth project I added form validation with Javascript adding to the userfriendly nature of the modal forms.
 
+In the 9th I integrated NPM Webpack and did some finishing touches on the Javascript the website is now fully funcional.
+
 ## Project features
 
 - Semantic HTML5
@@ -19,12 +19,14 @@ In the sixth project I added form validation with Javascript adding to the userf
 - Flexgrid
 - Positioning
 - Flat BEM file structure
-- 2 custom forms
+- 3 custom forms
 - CSS animation and transform
 - Responsive design
 - Javascript
 - Form validation
+- NPM
+- Webpack
 
 ## Plan on improving the project
 
-Adding more Javascript and API to the project to add enhanced functionality to the project enabling it to function as an actual socail media platform.
+Making the ability to add new users to increase the functionality of the website.
